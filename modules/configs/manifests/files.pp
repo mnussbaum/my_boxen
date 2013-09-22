@@ -16,37 +16,44 @@ class configs::files($home, $config_dir) {
 
   file { $config_dir:
     ensure => directory,
-    mode => "0755",
+    mode   => "0755",
   }
 
   file { "${config_dir}/zshrc":
     content => template("configs/zshrc.erb"),
     require => File[$config_dir],
-    mode => "0644",
+    mode    => "0644",
   }
 
   file { "${config_dir}/vim":
-    source => "puppet:///modules/configs/vim",
-    mode => "0755",
+    source  => "puppet:///modules/configs/vim",
+    mode    => "0755",
+    require => File[$config_dir],
+  }
+
+  file { "${config_dir}/zsh":
+    source  => "puppet:///modules/configs/zsh",
+    mode    => "0755",
+    recurse => true,
     require => File[$config_dir],
   }
 
   configs::add_file{ $non_templated_configs:
-    home => $home,
+    home       => $home,
     config_dir => $config_dir,
-    require => File[$config_dir],
+    require    => File[$config_dir],
   }
 
   configs::symlink_config{ $config_files:
-    home => $home,
+    home       => $home,
     config_dir => $config_dir,
-    require => File[$config_dir],
+    require    => File[$config_dir],
   }
 
-  configs::symlink_config{ "vim":
-    home => $home,
+  configs::symlink_config{ ["vim", "zsh"]:
+    home       => $home,
     config_dir => $config_dir,
-    mode => "0755",
-    require => File[$config_dir],
+    mode       => "0755",
+    require    => File[$config_dir],
   }
 }

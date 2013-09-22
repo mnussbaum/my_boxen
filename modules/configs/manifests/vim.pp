@@ -4,10 +4,11 @@ class configs::vim($config_dir) {
     source => "gmarik/vundle",
   }
 
-  $vundle_install = "vim +BundleInstall +qall"
+  $vundle_install = "vim -u ${config_dir}/vimrc +BundleInstall +qall"
   exec { $vundle_install:
-    cwd => $vundle,
-    environment => "CONFIG_PATH=${config_dir}",
+    environment   => "CONFIG_PATH=${config_dir}",
+    subscribe     => File["${config_dir}/vimrc"],
+    refreshonly   => true,
   }
 
   package { "cmake":
@@ -16,7 +17,7 @@ class configs::vim($config_dir) {
 
   exec { "install_youcompleteme_plugin":
     command => "sh install.sh",
-    cwd => "${config_dir}/vim/bundle/YouCompleteMe",
+    cwd     => "${config_dir}/vim/bundle/YouCompleteMe",
     creates => "${config_dir}/vim/bundle/YouCompleteMe/python/ycm_core.so",
   }
 

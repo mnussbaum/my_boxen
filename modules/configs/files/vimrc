@@ -2,43 +2,49 @@ set nocompatible
 filetype on
 
 set rtp+=$CONFIG_PATH/vim/bundle/vundle/
-call vundle#rc()
+call vundle#rc($CONFIG_PATH."/vim/bundle")
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Bundle "gmarik/vundle"
 
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'bufexplorer.zip'
+Bundle "Valloric/YouCompleteMe"
+Bundle "puppetlabs/puppet-syntax-vim"
+Bundle "nanotech/jellybeans.vim"
+Bundle "Shougo/unite.vim"
+Bundle "bufexplorer.zip"
 Bundle "michaeljsmith/vim-indent-object"
-Bundle 'L9'
+Bundle "L9"
 Bundle "Lokaltog/vim-powerline"
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-rails'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'benmills/vimux'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'pgr0ss/vimux-ruby-test'
-Bundle 'Raimondi/delimitMate'
+Bundle "vim-ruby/vim-ruby"
+Bundle "tpope/vim-endwise"
+Bundle "tpope/vim-repeat"
+Bundle "tpope/vim-rails"
+Bundle "kana/vim-textobj-user"
+Bundle "nelstrom/vim-textobj-rubyblock"
+Bundle "tsaleh/vim-matchit"
+Bundle "benmills/vimux"
+Bundle "scrooloose/nerdtree"
+Bundle "tomtom/tcomment_vim"
+Bundle "tpope/vim-fugitive"
+Bundle "pgr0ss/vimux-ruby-test"
+Bundle "Raimondi/delimitMate"
 
 let mapleader = "\\"
 
 syntax on
 
-let g:Powerline_symbols = 'fancy'
+try
+  colorscheme jellybeans
+catch /^Vim\%((\a\+)\)\=:E185/
+endtry
+
+" Remove jellybeans' grey text background
+highlight Normal ctermbg=NONE
+
+let g:Powerline_symbols = "fancy"
 set laststatus=2 " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 
-let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data,*.class,*.pyc"
-let g:fuzzy_ceiling = 50000
-let g:fuzzy_matching_limit = 10
-highlight Pmenu ctermfg=black ctermbg=gray
-highlight PmenuSel ctermfg=black ctermbg=white
 
 let g:VimuxUseNearestPane = 1
 map <silent> <Leader>rb :wa<CR> :RunAllRubyTests<CR>
@@ -61,7 +67,7 @@ set tags=./tags;/
 map <silent> <Leader>nt :NERDTreeToggle<CR>
 map <silent> <Leader>nr :NERDTree<CR>
 map <silent> <Leader>nf :NERDTreeFind<CR>
-map <silent> <Leader>ff :FufFile<CR>
+map <silent> <Leader>ff :Unite file<CR>
 
 " syntax highlight all rspec files
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
@@ -69,6 +75,7 @@ highlight def link rubyRspec Function
 
 set undodir=/tmp
 set undofile
+set viminfo+=n/tmp
 
 " hide useless prompts
 set shortmess=atI
@@ -132,8 +139,6 @@ set ruler
 " Highlight 80th column
 set colorcolumn=80
 highlight ColorColumn ctermbg=97
-
-set shell=/usr/local/bin/zsh
 
 " Enable backspace in insert mode
 set backspace=2

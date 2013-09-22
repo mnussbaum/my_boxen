@@ -2,6 +2,7 @@ class vim {
   package { "docutils":
     ensure => installed,
     provider => pip,
+    require => Class["python"],
   }
   package { "mercurial":
     ensure => installed,

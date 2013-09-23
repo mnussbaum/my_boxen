@@ -1,5 +1,6 @@
 class people::mnussbaum {
   include configs
+  include ir_black_terminal
 
   class { "people::mnussbaum::applications":
     require => Class["configs"],

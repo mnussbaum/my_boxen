@@ -7,6 +7,7 @@ class configs::files($home, $config_dir) {
     "rspec",
     "inputrc",
     "irbrc",
+    "slate",
   ]
 
   $config_files = [

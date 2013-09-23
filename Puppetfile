@@ -37,6 +37,12 @@ github "zsh",        "1.0.0"
 github "osx",        "1.6.0"
 github "python",     "1.2.1"
 github "tmux",       "1.0.2"
+github "chrome",     "1.1.1"
+github "adium",      "1.1.1"
+github "firefox",    "1.1.3"
+github "better_touch_tools",    "1.0.0"
+github "caffeine",   "1.0.0"
+github "slate",      "1.0.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

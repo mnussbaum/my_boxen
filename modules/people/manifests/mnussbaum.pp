@@ -6,6 +6,10 @@ class people::mnussbaum {
     require => Class["configs"],
   }
 
+  class { "people::mnussbaum::login_items":
+    require => Class["people::mnussbaum::applications"],
+  }
+
   ##################################
   ## Facter, Puppet, and Envpuppet##
   ##################################

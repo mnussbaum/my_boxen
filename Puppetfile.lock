@@ -169,9 +169,9 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 GITHUBTARBALL
-  remote: smh/puppet-pckeyboardhack
+  remote: sbader/puppet-pckeyboardhack
   specs:
-    pckeyboardhack (1.0.5)
+    pckeyboardhack (1.0.3)
 
 DEPENDENCIES
   adium (= 1.1.1)
@@ -195,7 +195,7 @@ DEPENDENCIES
   onepassword (= 1.0.2)
   openssl (= 1.0.0)
   osx (= 1.6.0)
-  pckeyboardhack (= 1.0.5)
+  pckeyboardhack (= 1.0.3)
   python (= 1.2.1)
   repository (= 2.2.0)
   ruby (= 6.3.4)

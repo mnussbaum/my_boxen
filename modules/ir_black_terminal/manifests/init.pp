@@ -5,9 +5,10 @@ class ir_black_terminal() {
       mode   => "0644",
     }
 
+    $source_code_pro_regular_for_powerline = "/Users/${boxen_user}/Library/Fonts/SourceCodePro-Regular-Powerline.otf"
     $import_ir_black = "open ${ir_black}"
     exec { $import_ir_black:
-      require => File[$ir_black],
+      require => [File[$ir_black], File[$source_code_pro_regular_for_powerline]],
       unless => "defaults read com.apple.Terminal 'Window Settings' | grep IR_Black",
     }
 

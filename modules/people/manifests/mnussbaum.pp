@@ -1,6 +1,7 @@
 class people::mnussbaum {
   include configs
   include ir_black_terminal
+  include source_code_pro_regular_for_powerline
 
   class { "people::mnussbaum::applications":
     require => Class["configs"],

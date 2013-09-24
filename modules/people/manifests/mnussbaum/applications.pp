@@ -1,12 +1,14 @@
 class people::mnussbaum::applications {
-  include zsh
-  include vim
-  include tmux
-  include chrome
   include adium
-  include firefox
+  class { "people::mnussbaum::battery": }
   include better_touch_tools
   include caffeine
+  include chrome
+  include dropbox
+  include firefox
+  include littlesnitch
   include slate
-  class { "people::mnussbaum::battery": }
+  include tmux
+  include vim
+  include zsh
 }

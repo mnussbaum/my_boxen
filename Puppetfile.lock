@@ -69,6 +69,11 @@ GITHUBTARBALL
     hub (1.0.3)
 
 GITHUBTARBALL
+  remote: boxen/puppet-keepassx
+  specs:
+    keepassx (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.4.2)
@@ -77,6 +82,11 @@ GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
     nodejs (3.2.9)
+
+GITHUBTARBALL
+  remote: boxen/puppet-onepassword
+  specs:
+    onepassword (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -119,6 +129,26 @@ GITHUBTARBALL
     tmux (1.0.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-transmission
+  specs:
+    transmission (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vagrant
+  specs:
+    vagrant (2.0.12)
+
+GITHUBTARBALL
+  remote: boxen/puppet-virtualbox
+  specs:
+    virtualbox (1.0.5)
+
+GITHUBTARBALL
+  remote: boxen/puppet-viscosity
+  specs:
+    viscosity (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
@@ -138,6 +168,11 @@ GITHUBTARBALL
   specs:
     stdlib (4.1.0)
 
+GITHUBTARBALL
+  remote: smh/puppet-pckeyboardhack
+  specs:
+    pckeyboardhack (1.0.5)
+
 DEPENDENCIES
   adium (= 1.1.1)
   autoconf (= 1.0.0)
@@ -153,11 +188,14 @@ DEPENDENCIES
   homebrew (= 1.4.1)
   hub (= 1.0.3)
   inifile (= 1.0.0)
+  keepassx (= 1.0.0)
   littlesnitch (= 1.0.1)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
+  onepassword (= 1.0.2)
   openssl (= 1.0.0)
   osx (= 1.6.0)
+  pckeyboardhack (= 1.0.5)
   python (= 1.2.1)
   repository (= 2.2.0)
   ruby (= 6.3.4)
@@ -165,6 +203,10 @@ DEPENDENCIES
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
   tmux (= 1.0.2)
+  transmission (= 1.0.0)
+  vagrant (= 2.0.12)
+  virtualbox (= 1.0.5)
+  viscosity (= 1.0.0)
   xquartz (= 1.1.0)
   zsh (= 1.0.0)
 

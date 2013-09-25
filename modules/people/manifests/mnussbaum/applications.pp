@@ -4,6 +4,7 @@ class people::mnussbaum::applications {
   include better_touch_tools
   include caffeine
   include chrome
+  include ctags
   include dropbox
   include firefox
   include keepassx

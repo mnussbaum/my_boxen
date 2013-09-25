@@ -9,6 +9,18 @@ class people::mnussbaum::osx_preferences {
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
 
+  hot_corners { "Desktop":
+    corner => "bottom right",
+    action => "desktop",
+  }
+  hot_corners { "Mission Control":
+    corner => "bottom left",
+    action => "mission control",
+  }
+  hot_corners { "Screen Saver":
+    corner => "top left",
+    action => "start screensaver",
+  }
   boxen::osx_defaults{ "Disable Dashboard":
     domain => "com.apple.dashboard",
     key    => "mcx-disabled",

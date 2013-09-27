@@ -7,6 +7,7 @@ class people::mnussbaum::applications {
   include ctags
   include dropbox
   include firefox
+  include gpg
   include keepassx
   include littlesnitch
   include onepassword

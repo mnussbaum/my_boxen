@@ -7,7 +7,7 @@ class people::mnussbaum::applications {
   include ctags
   include dropbox
   include firefox
-  include gpg
+  package { "gnupg": ensure => "present", }
   include keepassx
   include littlesnitch
   include onepassword

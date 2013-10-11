@@ -4,6 +4,7 @@ class people::mnussbaum::login_items {
     "Dropbox",
     "Flux",
     "Slate",
+    "PCKeyboardHack",
   ]
   people::mnussbaum::login_item{ $login_items: }
 }

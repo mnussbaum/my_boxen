@@ -11,7 +11,7 @@ class people::mnussbaum::applications {
   include keepassx
   include littlesnitch
   include onepassword
-  class { "people::mnussbaum::load_pckeyboardhack": }
+  include pckeyboardhack
   include slate
   include tmux
   include transmission

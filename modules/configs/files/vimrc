@@ -67,7 +67,7 @@ set tags=./tags;/
 map <silent> <Leader>nt :NERDTreeToggle<CR>
 map <silent> <Leader>nr :NERDTree<CR>
 map <silent> <Leader>nf :NERDTreeFind<CR>
-map <silent> <Leader>ff :Unite -start-insert file<CR>
+map <silent> <Leader>ff :Unite -start-insert file_rec<CR>
 
 " syntax highlight all rspec files
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let

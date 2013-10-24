@@ -16,6 +16,9 @@ class people::mnussbaum::applications {
   include tmux
   include transmission
   include vagrant
+  vagrant::plugin { "vagrant-vbguest":
+    require => Class["vagrant"],
+  }
   include vim
   include virtualbox
   include viscosity

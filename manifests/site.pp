@@ -57,6 +57,7 @@ node default {
   include git
   include hub
   include nginx
+  include nodejs::v0_10_21
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

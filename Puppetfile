@@ -4,7 +4,7 @@ def github(name, version, options = nil)
   mod name, version, :github_tarball => options[:repo]
 end
 
-github "boxen",      "3.0.4"
+github "boxen",                 "3.1.0"
 
 github "adium",                 "1.1.1"
 github "autoconf",              "1.0.0"
@@ -24,7 +24,7 @@ github "inifile",               "1.0.0", :repo => "puppetlabs/puppetlabs-inifile
 github "keepassx",              "1.0.0"
 github "littlesnitch",          "1.0.1", :repo => "andrzejsliwa/puppet-littlesnitch"
 github "nginx",                 "1.4.2"
-github "nodejs",                "3.2.9"
+github "nodejs",                "3.5.0"
 github "onepassword",           "1.0.2"
 github "openssl",               "1.0.0"
 github "osx",                   "1.6.0"
@@ -32,7 +32,7 @@ github "pckeyboardhack",        "1.0.3", :repo => "sbader/puppet-pckeyboardhack"
 github "property_list_key",     "0.1.0", :repo => "glarizza/puppet-property_list_key"
 github "python",                "1.2.1"
 github "repository",            "2.2.0"
-github "ruby",                  "6.5.0"
+github "ruby",                  "6.7.5"
 github "slate",                 "1.0.0"
 github "stdlib",                "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",                  "1.0.0"
@@ -40,7 +40,7 @@ github "terminal_theme",        "0.1.0", :repo => "mnussbaum/puppet-terminal_the
 github "tmux",                  "1.0.2"
 github "transmission",          "1.0.0"
 github "vagrant",               "2.0.14"
-github "virtualbox",            "1.0.7"
+github "virtualbox",            "1.0.8", :repo => "mnussbaum/puppet-virtualbox"
 github "viscosity",             "1.0.0"
 github "xquartz",               "1.1.0"
 github "zsh",                   "1.0.0"

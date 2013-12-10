@@ -21,7 +21,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.0.4)
+    boxen (3.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -86,7 +86,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (3.2.9)
+    nodejs (3.5.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-onepassword
@@ -116,7 +116,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.5.0)
+    ruby (6.7.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-slate
@@ -142,11 +142,6 @@ GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
     vagrant (2.0.14)
-
-GITHUBTARBALL
-  remote: boxen/puppet-virtualbox
-  specs:
-    virtualbox (1.0.7)
 
 GITHUBTARBALL
   remote: boxen/puppet-viscosity
@@ -179,6 +174,11 @@ GITHUBTARBALL
     terminal_theme (0.1.0)
 
 GITHUBTARBALL
+  remote: mnussbaum/puppet-virtualbox
+  specs:
+    virtualbox (1.0.8)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.0)
@@ -197,7 +197,7 @@ DEPENDENCIES
   adium (= 1.1.1)
   autoconf (= 1.0.0)
   better_touch_tools (= 1.0.0)
-  boxen (= 3.0.4)
+  boxen (= 3.1.0)
   caffeine (= 1.0.0)
   chrome (= 1.1.1)
   ctags (= 1.0.0)
@@ -213,7 +213,7 @@ DEPENDENCIES
   keepassx (= 1.0.0)
   littlesnitch (= 1.0.1)
   nginx (= 1.4.2)
-  nodejs (= 3.2.9)
+  nodejs (= 3.5.0)
   onepassword (= 1.0.2)
   openssl (= 1.0.0)
   osx (= 1.6.0)
@@ -221,7 +221,7 @@ DEPENDENCIES
   property_list_key (= 0.1.0)
   python (= 1.2.1)
   repository (= 2.2.0)
-  ruby (= 6.5.0)
+  ruby (= 6.7.5)
   slate (= 1.0.0)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
@@ -229,7 +229,7 @@ DEPENDENCIES
   tmux (= 1.0.2)
   transmission (= 1.0.0)
   vagrant (= 2.0.14)
-  virtualbox (= 1.0.7)
+  virtualbox (= 1.0.8)
   viscosity (= 1.0.0)
   xquartz (= 1.1.0)
   zsh (= 1.0.0)

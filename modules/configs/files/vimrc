@@ -7,27 +7,32 @@ call vundle#rc($CONFIG_PATH."/vim/bundle")
 " let Vundle manage Vundle
 Bundle "gmarik/vundle"
 
-Bundle "Valloric/YouCompleteMe"
-Bundle "puppetlabs/puppet-syntax-vim"
-Bundle "nanotech/jellybeans.vim"
-Bundle "Shougo/unite.vim"
-Bundle "bufexplorer.zip"
-Bundle "michaeljsmith/vim-indent-object"
+Bundle "JulesWang/css.vim"
 Bundle "L9"
 Bundle "Lokaltog/vim-powerline"
-Bundle "vim-ruby/vim-ruby"
-Bundle "tpope/vim-endwise"
-Bundle "tpope/vim-repeat"
-Bundle "tpope/vim-rails"
-Bundle "kana/vim-textobj-user"
-Bundle "nelstrom/vim-textobj-rubyblock"
-Bundle "tsaleh/vim-matchit"
+Bundle "Raimondi/delimitMate"
+Bundle "Shougo/unite.vim"
+Bundle "Valloric/YouCompleteMe"
 Bundle "benmills/vimux"
+Bundle "bufexplorer.zip"
+Bundle "cakebaker/scss-syntax.vim"
+Bundle "jelera/vim-javascript-syntax"
+Bundle "kana/vim-textobj-user"
+Bundle "michaeljsmith/vim-indent-object"
+Bundle "nanotech/jellybeans.vim"
+Bundle "nelstrom/vim-textobj-rubyblock"
+Bundle "othree/javascript-libraries-syntax.vim"
+Bundle "pangloss/vim-javascript"
+Bundle "pgr0ss/vimux-ruby-test"
+Bundle "puppetlabs/puppet-syntax-vim"
 Bundle "scrooloose/nerdtree"
 Bundle "tomtom/tcomment_vim"
+Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-fugitive"
-Bundle "pgr0ss/vimux-ruby-test"
-Bundle "Raimondi/delimitMate"
+Bundle "tpope/vim-rails"
+Bundle "tpope/vim-repeat"
+Bundle "tsaleh/vim-matchit"
+Bundle "vim-ruby/vim-ruby"
 
 let mapleader = "\\"
 
@@ -72,6 +77,8 @@ map <silent> <Leader>ff :Unite -start-insert file_rec<CR>
 " syntax highlight all rspec files
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
 highlight def link rubyRspec Function
+
+let g:used_javascript_libs = "angularjs,jquery,underscore"
 
 set undodir=/tmp
 set undofile

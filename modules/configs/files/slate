@@ -3,30 +3,25 @@ config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
 # General aliases
-alias sox screenOriginX
-alias soy screenOriginY
-alias ssx screenSizeX
-alias ssy screenSizeY
+alias fullXfullY screenSizeX;screenSizeY
+alias fullXhalfY screenSizeX;screenSizeY/2
+alias halfXfullY screenSizeX/2;screenSizeY
+alias halfXhalfY screenSizeX/2;screenSizeY/2
 
 # Position aliases
-alias centered ${sox}+${ssx}/8;${soy}+${ssy}/8 ${ssx}/8*6;${ssy}/8*6
-alias fullscreen ${sox};${soy} ${ssx};${ssy}
-alias leftHalf ${sox};${soy} ${ssx}/2;${ssy}
-alias rightHalf ${sox}+${ssx}/2;${soy} ${ssx}/2;${ssy}
+alias fullScreen   screenOriginX;screenOriginY ${fullXfullY}
+alias left         screenOriginX;screenOriginY ${halfXfullY}
+alias right        screenOriginX+screenSizeX/2;screenOriginY ${halfXfullY}
+alias corner       screenSizeX/2;screenSizeY/2
 
 # Throw Bindings
-bind down:ctrl;alt;cmd move ${centered}
-bind up:ctrl;alt;cmd move ${fullscreen}
-bind left:ctrl;alt;cmd move ${leftHalf}
-bind right:ctrl;alt;cmd move ${rightHalf}
-
-# Focus Bindings
-bind right:cmd    focus right
-bind left:cmd     focus left
-bind up:cmd       focus up
-bind down:cmd     focus down
-bind up:cmd;alt   focus behind
-bind down:cmd;alt focus behind
+bind up:ctrl;alt;cmd     move    ${fullScreen}
+bind left:ctrl;alt;cmd   move    ${left}
+bind right:ctrl;alt;cmd  move    ${right}
+bind right:cmd;alt       corner  top-right     resize:${corner}
+bind right:cmd           corner  bottom-right  resize:${corner}
+bind left:cmd;alt        corner  top-left      resize:${corner}
+bind left:cmd            corner  bottom-left   resize:${corner}
 
 # Window Hints
 bind esc:cmd hint

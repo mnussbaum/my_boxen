@@ -144,8 +144,8 @@ set smarttab
 set ruler
 
 " Highlight 80th column
-highlight ColorColumn ctermbg=97
-call matchadd('ColorColumn', '\%81v', 100)
+let &colorcolumn="80,".join(range(120,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " Enable backspace in insert mode
 set backspace=2

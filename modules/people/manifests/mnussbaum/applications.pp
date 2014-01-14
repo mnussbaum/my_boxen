@@ -8,6 +8,7 @@ class people::mnussbaum::applications {
   include dropbox
   include firefox
   package { "gnupg": ensure => "present", }
+  include heroku
   include keepassx
   include littlesnitch
   include onepassword

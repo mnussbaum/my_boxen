@@ -1,4 +1,10 @@
 class configs::vim($config_dir) {
+  # Fixes path in Vim on OS X
+  $path_helper = "/usr/libexec/path_helper"
+  file { $path_helper:
+    mode => "0644"
+  }
+
   $vundle = "${config_dir}/vim/bundle/vundle"
   repository { $vundle:
     source => "gmarik/vundle",
@@ -21,6 +27,7 @@ class configs::vim($config_dir) {
     creates => "${config_dir}/vim/bundle/YouCompleteMe/python/ycm_core.so",
   }
 
+  File[$path_helper] ->
   Repository[$vundle] ->
   Exec[$vundle_install] ->
   Package["cmake"] ->

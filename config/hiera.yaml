@@ -1,0 +1,6 @@
+---
+:backends: yaml
+:yaml:
+  :datadir: "%{::boxen_repodir}/data"
+  :hierarchy: common
+  :logger: console

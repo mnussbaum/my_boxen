@@ -4,7 +4,7 @@ def github(name, version, options = nil)
   mod name, version, :github_tarball => options[:repo]
 end
 
-github "boxen",                 "3.1.0"
+github "boxen",                 "3.4.2"
 
 github "adium",                 "1.1.1"
 github "autoconf",              "1.0.0"

@@ -8,5 +8,4 @@
 /log
 /tmp
 /shared/*
-!/shared/README.md
-/vendor/
+/vendor/*

@@ -166,3 +166,4 @@ set ignorecase
 set smartcase
 
 noremap Y y$
+set pastetoggle=<Leader>p

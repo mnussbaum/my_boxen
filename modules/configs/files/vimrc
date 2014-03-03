@@ -9,7 +9,7 @@ Bundle "gmarik/vundle"
 
 Bundle "JulesWang/css.vim"
 Bundle "L9"
-Bundle "Lokaltog/vim-powerline"
+Bundle "bling/vim-airline"
 Bundle "Raimondi/delimitMate"
 Bundle "Shougo/unite.vim"
 Bundle "Valloric/YouCompleteMe"
@@ -46,10 +46,18 @@ endtry
 " Remove jellybeans' grey text background
 highlight Normal ctermbg=NONE
 
-let g:Powerline_symbols = "fancy"
-set laststatus=2 " Always show the statusline
-set encoding=utf-8 " Necessary to show unicode glyphs
+set laststatus=2
+set encoding=utf-8
+let g:airline_theme             = "jellybeans"
+let g:airline_enable_branch     = 1
 
+let g:airline_left_sep          = "⮀"
+let g:airline_left_alt_sep      = "⮁"
+let g:airline_right_sep         = "⮂"
+let g:airline_right_alt_sep     = "⮃"
+let g:airline_branch_prefix     = "⭠"
+let g:airline_readonly_symbol   = "⭤"
+let g:airline_linecolumn_prefix = "⭡"
 
 let g:VimuxUseNearestPane = 1
 map <silent> <Leader>rb :wa<CR> :RunAllRubyTests<CR>

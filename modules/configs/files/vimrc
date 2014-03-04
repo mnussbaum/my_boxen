@@ -9,13 +9,14 @@ Bundle "gmarik/vundle"
 
 Bundle "JulesWang/css.vim"
 Bundle "L9"
-Bundle "bling/vim-airline"
 Bundle "Raimondi/delimitMate"
 Bundle "Shougo/unite.vim"
 Bundle "Valloric/YouCompleteMe"
 Bundle "benmills/vimux"
+Bundle "bling/vim-airline"
 Bundle "bufexplorer.zip"
 Bundle "cakebaker/scss-syntax.vim"
+Bundle "elzr/vim-json"
 Bundle "jelera/vim-javascript-syntax"
 Bundle "kana/vim-textobj-user"
 Bundle "michaeljsmith/vim-indent-object"
@@ -72,6 +73,8 @@ vmap <silent> <Leader>vs "vy :call RunVimTmuxCommand(@v)<CR>
 nmap <silent> <Leader>vs vip<Leader>vs<CR>
 
 autocmd FileType ruby runtime ruby_mappings.vim
+
+let g:vim_json_syntax_conceal = 0
 
 map <silent> <Leader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
 " check for a tags file up to root

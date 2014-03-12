@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem "librarian-puppet", :git => "git@github.com:mnussbaum/librarian-puppet.git", :tag => "0.9.11"
-gem "cardboard", "~> 1.0"
+gem "librarian-puppet", "0.9.14"
+gem "cardboard", "2.0.0"

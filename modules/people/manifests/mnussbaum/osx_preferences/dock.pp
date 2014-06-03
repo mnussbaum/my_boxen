@@ -22,9 +22,9 @@ class people::mnussbaum::osx_preferences::dock {
       position => 3,
       require  => Class["firefox"];
 
-    'Add Adium':
-      item     => "/Applications/Adium.app",
-      label    => "Adium",
+    'Add Slack':
+      item     => "/Applications/Slack.app",
+      label    => "Slack",
       action   => "add",
       position => 4,
       require  => Class["adium"];

@@ -4,9 +4,9 @@ class people::mnussbaum::login_items {
     "Dropbox",
     "Flux",
     "Slate",
+    "Seil",
   ]
   people::mnussbaum::login_item{ $login_items: }
-  include seil::login_item
 }
 
 define people::mnussbaum::login_item() {

@@ -4,7 +4,7 @@ class people::mnussbaum::osx_preferences::input_preferences {
     delay => 4
   }
   class { 'osx::global::key_repeat_rate':
-    rate => 0.02
+    rate => 1
   }
   class { "osx::global::natural_mouse_scrolling":
     enabled => true

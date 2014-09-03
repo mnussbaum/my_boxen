@@ -124,6 +124,11 @@ GITHUBTARBALL
     ruby (8.1.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-seil
+  specs:
+    seil (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-slate
   specs:
     slate (1.0.0)
@@ -198,11 +203,6 @@ GITHUBTARBALL
   specs:
     module-data (0.0.3)
 
-GITHUBTARBALL
-  remote: sbader/puppet-pckeyboardhack
-  specs:
-    pckeyboardhack (1.0.3)
-
 DEPENDENCIES
   adium (= 1.1.1)
   autoconf (= 1.0.0)
@@ -229,11 +229,11 @@ DEPENDENCIES
   onepassword (= 1.1.2)
   openssl (= 1.0.0)
   osx (= 2.7.0)
-  pckeyboardhack (= 1.0.3)
   property_list_key (= 0.2.1)
   python (= 1.2.1)
   repository (= 2.3.0)
   ruby (= 8.1.2)
+  seil (= 1.0.2)
   slate (= 1.0.0)
   stdlib (= 4.3.0)
   sudo (= 1.0.0)

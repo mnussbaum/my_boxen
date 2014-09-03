@@ -12,7 +12,7 @@ class people::mnussbaum::applications {
   include keepassx
   include littlesnitch
   include onepassword
-  include pckeyboardhack
+  include seil
   include slate
   homebrew::tap { "nviennot/tmate": } ->
     package { "tmate": ensure => present }

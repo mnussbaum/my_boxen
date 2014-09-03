@@ -10,7 +10,7 @@ class people::mnussbaum::osx_preferences::dock {
 
     'Add Chrome':
       item     => "/Applications/Google Chrome.app",
-      label    => "Chrome",
+      label    => "Google Chrome",
       action   => "add",
       position => 2,
       require  => Class["chrome"];

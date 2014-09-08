@@ -1,6 +1,7 @@
 class people::mnussbaum::login_items {
   $login_items = [
     "BetterTouchTool",
+    "Caffeine",
     "Dropbox",
     "Flux",
     "Slate",

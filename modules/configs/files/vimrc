@@ -177,4 +177,8 @@ set ignorecase
 set smartcase
 
 noremap Y y$
+
 set pastetoggle=<Leader>p
+
+set timeoutlen=1000
+set ttimeoutlen=0

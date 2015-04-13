@@ -95,7 +95,7 @@ let g:used_javascript_libs = "angularjs,jquery,underscore"
 
 set undodir=/tmp
 set undofile
-set viminfo+=n/tmp
+set viminfo+=n/tmp/viminfo
 
 " hide useless prompts
 set shortmess=atI

@@ -2,7 +2,6 @@ class people::mnussbaum::applications {
   include adium
   class { "people::mnussbaum::battery": }
   include better_touch_tools
-  include caffeine
   include chrome
   include ctags
   include dropbox

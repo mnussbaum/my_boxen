@@ -22,9 +22,9 @@ class configs::vim($config_dir) {
   }
 
   exec { "install_youcompleteme_plugin":
-    command => "sh install.sh",
+    command => "sh install.sh --clang-completer",
     cwd     => "${config_dir}/vim/bundle/YouCompleteMe",
-    creates => "${config_dir}/vim/bundle/YouCompleteMe/python/ycm_core.so",
+    creates => "${config_dir}/vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so",
   }
 
   File[$path_helper] ->

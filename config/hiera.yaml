@@ -1,6 +1,9 @@
----
-:backends: yaml
+:backends:
+  - yaml
 :yaml:
   :datadir: "%{::boxen_repodir}/data"
-  :hierarchy: common
-  :logger: console
+:hierarchy:
+  - "users/%{github_login}"
+  - common
+
+:merge_behavior: deeper

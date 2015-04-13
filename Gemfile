@@ -1,5 +1,19 @@
 source "https://rubygems.org"
 
-gem "librarian-puppet", "0.9.14"
-gem "cardboard", "2.0.0"
+gem "boxen",                  "~> 2.7.0"
+gem "cardboard",              "~> 2.1.0"
+gem "deep_merge",             "~> 1.0"
+gem "hiera",                  "~> 1.3.3"
+gem "librarian-puppet",       "~> 1.0.9"
 gem "nokogiri", "1.6.3.1"
+gem "open4",                  "~> 1.3.4"
+gem "puppet",                 "3.7.1"
+gem "puppet-lint",            "0.3.2"
+gem "puppetlabs_spec_helper", "0.4.1"
+gem "rake",                   "10.3.2"
+gem "rspec-puppet",           "1.0.1"
+
+group :development do
+  gem "aws-sdk-core", "~> 2.0.11"
+  gem "net-ssh"
+end

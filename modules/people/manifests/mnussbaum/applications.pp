@@ -6,10 +6,10 @@ class people::mnussbaum::applications {
   include ctags
   include dropbox
   include firefox
+  include flux
   package { "gnupg": ensure => "present", }
   include heroku
   include keepassx
-  include littlesnitch
   include onepassword
   include seil
   include slate

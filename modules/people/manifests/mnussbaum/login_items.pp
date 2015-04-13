@@ -3,6 +3,7 @@ class people::mnussbaum::login_items {
     "BetterTouchTool",
     "Dropbox",
     "Flux",
+    "KeepingYouAwake",
     "Slate",
     "Seil",
   ]
